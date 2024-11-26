@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.lexend-deca {
+  font-family: "Lexend Deca";
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+.big-shoulders {
+  font-family: "Big Shoulders Display";
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
+
+body {
+  --white: hsl(0, 0%, 95%);
+  --transpwhite: hsla(0, 0%, 100%, 0.75);
+  --sedancolor: hsl(31, 77%, 52%);
+  --suvcolor: hsl(184, 100%, 22%);
+  --luxurycolor: hsl(179, 100%, 13%);
+  background-color: var(--white);
+}
+main {
+  height: 100vh;
+  place-content: center;
+  place-items: center;
+  color: var(--white);
+}
+
+main .container {
+  display: grid;
+  margin: 5%;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 20px;
+}
+
+@media (max-width: 800px) {
+  main .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+main .content {
+  display: grid;
+  grid-template-rows: 1fr 1fr 2.25fr 1fr;
+  height: 60vh;
+  max-width: 300px;
+  padding: 10% 15% 10% 15%;
+}
+
+main .sedan {
+  background-color: var(--sedancolor);
+  border-radius: 10px 0px 0px 10px;
+}
+
+@media (max-width: 800px) {
+  main .sedan {
+    border-radius: 10px 10px 0px 0px;
+  }
+}
+
+main .suv {
+  background-color: var(--suvcolor);
+}
+
+main .luxury {
+  background-color: var(--luxurycolor);
+  border-radius: 0px 10px 10px 0px;
+}
+
+@media (max-width: 800px) {
+  main .luxury {
+    border-radius: 0px 0px 10px 10px;
+  }
+}
+
+main .container h2 {
+  font-family: "Big Shoulders Display";
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 42px;
+}
+
+main .container p {
+  color: var(--transpwhite);
+  letter-spacing: 1.5px;
+}
+
+main .container button {
+  margin-top: auto;
+  width: 50%;
+  height: 60%;
+  border-radius: 250px;
+  border: var(--white) solid;
+}
+
+main .container button:hover {
+  cursor: pointer;
+}
+
+main .container .sedan button {
+  color: var(--sedancolor);
+}
+
+main .container .suv button {
+  color: var(--suvcolor);
+}
+
+main .container .luxury button {
+  color: var(--luxurycolor);
+}
