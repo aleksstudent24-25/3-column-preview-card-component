@@ -25,6 +25,7 @@ body {
   --luxurycolor: hsl(179, 100%, 13%);
   background-color: var(--white);
 }
+
 main {
   height: 100vh;
   place-content: center;
@@ -43,12 +44,16 @@ main .container {
   main .container {
     grid-template-columns: 1fr;
   }
+
+  main .content {
+    max-width: 300px;
+  }
 }
 
 main .content {
   display: grid;
   grid-template-rows: 1fr 1fr 2.25fr 1fr;
-  height: 60vh;
+  height: 65vh;
   max-width: 300px;
   padding: 10% 15% 10% 15%;
 }
@@ -94,7 +99,7 @@ main .container p {
 main .container button {
   margin-top: auto;
   width: 50%;
-  height: 60%;
+  height: 70%;
   border-radius: 250px;
   border: var(--white) solid;
 }
